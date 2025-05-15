@@ -32,8 +32,9 @@ const formSchema = z.object({
 });
 
 const Home = () => {
+
   const [IsLoading, setIsLoading] = useState(false);
-  const [openDialog, setOpenDialog] = useState(true);
+  const [openDialog, setOpenDialog] = useState(false);
 
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),
